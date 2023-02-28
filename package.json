@@ -1,0 +1,17 @@
+{
+  "name": "aplicaciones_moviles_-_unidad_2",
+  "version": "1.0.0",
+  "description": "Creación de Aplicación Híbrida",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "pro": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "parcel-bundler": "^1.8.1"
+  }
+}
