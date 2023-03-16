@@ -1,5 +1,16 @@
-$color:aqua;
+$color_background:rgb(80, 80, 80);
+$width_section: 340px;
+$height_section: 440px;
+$color_section:rgb(47, 225, 80);
 
 body{
-    background-color: $color;
+    background-color: $color_background;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: $width_section;
+    height: $height_section;
+    background-color: $color_section;
 }

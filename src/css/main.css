@@ -1,5 +1,11 @@
 body {
-  background-color: aqua;
+  background-color: rgb(80, 80, 80);
+  margin: 0;
+  padding: 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+section {
+  width: 340px;
+  height: 440px;
+  background-color: rgb(47, 225, 80);
+}
