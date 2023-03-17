@@ -1,7 +1,29 @@
 $color_background:rgb(80, 80, 80);
-$width_section: 340px;
-$height_section: 440px;
-$color_section:rgb(47, 225, 80);
+$section_width: 375px;
+$section_height: 667px;
+$section_color:rgb(47, 225, 80);
+
+$form-width: $section_width;
+$form-border: 1px solid #ccc;
+$form-radius: 5px;
+$form-padding: 20px;
+
+$label-display: block;
+$label-margin-bottom: 5px;
+
+$input-width: 100%;
+$input-padding: 10px;
+$input-border-radius: 5px;
+$input-border: 1px solid #ccc;
+$input-margin-bottom: 20px;
+$input-box-sizing: border-box;
+
+$submit-bg-color: #4CAF50;
+$submit-color: #fff;
+$submit-border: none;
+$submit-padding: 10px 20px;
+$submit-border-radius: 5px;
+$submit-cursor: pointer;
 
 body{
     background-color: $color_background;
@@ -10,7 +32,49 @@ body{
 }
 
 section{
-    width: $width_section;
-    height: $height_section;
-    background-color: $color_section;
+    text-align: center;
+    width: $section_width;
+    height: $section_height;
+    background-color: $section_color;
+}
+
+form {
+  width: $form-width - 60px;
+  margin: 50px auto;
+  padding: $form-padding;
+  border: $form-border;
+  border-radius: $form-radius;
+  font-family: Arial, sans-serif;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: $label-display;
+    margin-bottom: $label-margin-bottom;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: $input-width;
+    padding: $input-padding;
+    border-radius: $input-border-radius;
+    border: $input-border;
+    margin-bottom: $input-margin-bottom;
+    box-sizing: $input-box-sizing;
+  }
+  
+  input[type="submit"] {
+    background-color: $submit-bg-color;
+    color: $submit-color;
+    border: $submit-border;
+    padding: $submit-padding;
+    border-radius: $submit-border-radius;
+    cursor: $submit-cursor;
+    
+    &:hover {
+      background-color: darken($submit-bg-color, 10%);
+    }
+  }
 }

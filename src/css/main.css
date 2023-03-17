@@ -5,7 +5,49 @@ body {
 }
 
 section {
-  width: 340px;
-  height: 440px;
+  text-align: center;
+  width: 375px;
+  height: 667px;
   background-color: rgb(47, 225, 80);
+}
+
+form {
+  width: 315px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type=text], form input[type=email], form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+form input[type=submit] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type=submit]:hover {
+  background-color: #3d8b40;
 }
