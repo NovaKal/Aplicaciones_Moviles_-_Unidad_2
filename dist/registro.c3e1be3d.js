@@ -101,6 +101,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({31:[function(require,module,exports) {
 document.addEventListener("DOMContentLoaded", function () {
   window.registrarUsuario = function () {
+    var username = document.getElementById("username").value.trim();
     var nombre = document.getElementById("nombre").value.trim();
     var apellido = document.getElementById("apellido").value.trim();
     var emailInput = document.getElementById("email");
@@ -113,17 +114,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var usuario = {
+      username: username,
       nombre: nombre,
       apellido: apellido,
       email: email,
       password: password
     };
 
-    localStorage.setItem(email, JSON.stringify(usuario));
+    localStorage.setItem(username, JSON.stringify(usuario));
     alert("Usuario registrado con éxito");
   };
 });
-},{}],44:[function(require,module,exports) {
+
+window.iniciarSesion = function () {
+  var username = document.getElementById("username-login").value.trim();
+  var password = document.getElementById("password-login").value.trim();
+
+  var usuarioJSON = localStorage.getItem(username);
+  if (!usuarioJSON) {
+    alert("Nombre de usuario incorrecto");
+    return;
+  }
+
+  var usuario = JSON.parse(usuarioJSON);
+  if (usuario.password === password) {
+    alert("Inicio de sesión exitoso");
+    // Aquí puedes redirigir al usuario a la página de inicio o realizar otras acciones.
+  } else {
+    alert("Contraseña incorrecta");
+  }
+};
+},{}],64:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -293,5 +314,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[44,31], null)
+},{}]},{},[64,31], null)
 //# sourceMappingURL=/registro.c3e1be3d.map
