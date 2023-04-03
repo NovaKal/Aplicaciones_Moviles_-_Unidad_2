@@ -38,3 +38,16 @@ form {
     cursor: pointer; }
     form input[type="submit"]:hover {
       background-color: #3d8b40; }
+  form .hidden {
+    display: none; }
+  form .home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; }
+    form .home-button:hover {
+      background-color: #3d8b40; }

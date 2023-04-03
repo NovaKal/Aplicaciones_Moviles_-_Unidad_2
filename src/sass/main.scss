@@ -78,4 +78,25 @@ form {
       background-color: darken($submit-bg-color, 10%);
     }
   }
+
+  .hidden {
+    display: none;
+  }
+
+
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken(#4CAF50, 10%);
+  }
+}
 }

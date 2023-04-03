@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({31:[function(require,module,exports) {
+})({5:[function(require,module,exports) {
 document.addEventListener("DOMContentLoaded", function () {
   window.registrarUsuario = function () {
     var username = document.getElementById("username").value.trim();
@@ -139,12 +139,53 @@ window.iniciarSesion = function () {
   var usuario = JSON.parse(usuarioJSON);
   if (usuario.password === password) {
     alert("Inicio de sesión exitoso");
-    // Aquí puedes redirigir al usuario a la página de inicio o realizar otras acciones.
+    // Muestra la sección "home" y oculta la sección "login".
+    document.getElementById("home").classList.remove("hidden");
+    document.getElementById("login").classList.add("hidden");
   } else {
     alert("Contraseña incorrecta");
   }
 };
-},{}],64:[function(require,module,exports) {
+
+function mostrarSeccion(seccionId) {
+  var secciones = document.querySelectorAll("section");
+
+  secciones.forEach(function (seccion) {
+    seccion.style.display = "none";
+  });
+
+  document.getElementById(seccionId).style.display = "block";
+}
+window.mostrarSeccion = mostrarSeccion;
+
+document.addEventListener("DOMContentLoaded", function () {
+  var semesterButton = document.getElementById("semesterButton");
+  var courseButton = document.getElementById("courseButton");
+  var averageSemesterButton = document.getElementById("averageSemesterButton");
+  var calendarButton = document.getElementById("calendarButton");
+  var settingsButton = document.getElementById("settingsButton");
+  var logoutButton = document.getElementById("logoutButton");
+
+  semesterButton.addEventListener("click", function () {
+    return mostrarSeccion("semester");
+  });
+  courseButton.addEventListener("click", function () {
+    return mostrarSeccion("course");
+  });
+  averageSemesterButton.addEventListener("click", function () {
+    return mostrarSeccion("average_semester");
+  });
+  calendarButton.addEventListener("click", function () {
+    return mostrarSeccion("calendar");
+  });
+  settingsButton.addEventListener("click", function () {
+    return mostrarSeccion("settings");
+  });
+  logoutButton.addEventListener("click", function () {
+    return mostrarSeccion("login");
+  });
+});
+},{}],10:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -173,7 +214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49896' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58948' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -314,5 +355,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[64,31], null)
+},{}]},{},[10,5], null)
 //# sourceMappingURL=/registro.c3e1be3d.map
