@@ -49,9 +49,10 @@ form input[type=submit]:hover {
 form .hidden {
   display: none;
 }
-form .home-button {
+
+.home-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10x 20px;
   margin: 10px;
   border-radius: 5px;
   background-color: #4CAF50;
@@ -59,8 +60,83 @@ form .home-button {
   cursor: pointer;
   text-decoration: none;
 }
-form .home-button:hover {
+.home-button:hover {
   background-color: #3d8b40;
 }
 
-/*# sourceMappingURL=main.css.map */
+.settings-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  text-decoration: none;
+}
+.settings-button:hover {
+  background-color: #3d8b40;
+}
+
+.exit-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+.exit-button:hover {
+  background-color: #3d8b40;
+}
+
+.option-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.option-button:hover {
+  background-color: #3d8b40;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1px;
+}
+.grid .half-row {
+  grid-column: 1/span 2;
+  grid-row: 1;
+  background-color: gray;
+}
+
+.grid-container-modules {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 10px;
+}
+
+.row1 {
+  background-color: gray;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.image-title-container {
+  display: flex;
+  justify-content: center;
+}

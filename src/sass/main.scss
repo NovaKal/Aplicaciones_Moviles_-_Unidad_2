@@ -26,6 +26,8 @@ $submit-padding: 10px 20px;
 $submit-border-radius: 5px;
 $submit-cursor: pointer;
 
+$button-home-color: $submit-bg-color;
+
 body{
     background-color: $color_background;
     margin: 0;
@@ -82,21 +84,100 @@ form {
   .hidden {
     display: none;
   }
-
-
+}
 
 .home-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10x 20px;
   margin: 10px;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: $button-home-color;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    background-color: darken(#4CAF50, 10%);
+    background-color: darken($submit-bg-color, 10%);
   }
 }
+
+.settings-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: $button-home-color;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($submit-bg-color, 10%);
+  }
+}
+
+.exit-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: $button-home-color;
+  color: #fff;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($submit-bg-color, 10%);
+  }
+}
+
+.option-button {
+  display: inline-block;
+  padding: 10x 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: $button-home-color;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($submit-bg-color, 10%);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1px;
+
+  .half-row {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: gray;
+  }
+}
+
+.grid-container-modules {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 10px;
+}
+
+.row1 {
+  background-color: gray;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.image-title-container{
+  display: flex;
+  justify-content: center;
 }

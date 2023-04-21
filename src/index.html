@@ -57,30 +57,100 @@
       <input type="submit" value="Registrarse">
     </form>
   </section>
-  
+
   <section id="home">
     <h1>Home</h1>
-    
+      <div class="grid">
+        <div class="half-row">
+          <button onclick="mostrarSeccion('login')" class="exit-button">Salir</button>
+          <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+          <img src="./images/little-tree-5-sean-seal.jpg" alt="Tree">
+        </div>
+        <div class="row1">
+          <img src="./images/clock.png" alt="Clock">
+          <button onclick="mostrarSeccion('semester')" class="option-button">Semester</button>
+          <button onclick="mostrarSeccion('course')" class="option-button">Course</button> 
+        </div>
+        <div class="row1">
+          <img src="./images/november-realistic-calendar-icon-3d-rendered-date-november-10-free-png.png" alt="Date">
+          <button onclick="mostrarSeccion('average_semester')" class="option-button">Average</button>
+          <button onclick="mostrarSeccion('calendar')" class="option-button">Calendar</button>
+        </div>
+      </div> 
   </section>
 
   <section id="semester">
     <h1>Semester</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./images/clock.png" alt="icon">
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="course">
     <h1>Course</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./" alt="icon">
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="average_semester">
     <h1>Average Semester</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./" alt="icon">
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="calendar">
     <h1>Calendar</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./" alt="icon">
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="settings">
-    <h1>Settings</h1>
+    <h1>About</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./images/png-clipart-computer-icons-scalable-graphics-font-conference-for-management-accounting-research-about-icon-text-computer-program-removebg-preview.png" alt="icon">
+        </div>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis arcu eget velit suscipit, sit amet aliquet tellus feugiat.
+        Etiam ut dictum ipsum, ut pulvinar mi. Ut posuere suscipit quam, ac accumsan magna dignissim dapibus. Maecenas suscipit risus sed magna blandit,
+        ut aliquet libero luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut et quam ut erat vulputate facilisis nec non diam.
+        Nam sed nunc convallis, placerat justo vel, dapibus arcu. Proin molestie dapibus lorem tincidunt rhoncus. Vivamus feugiat facilisis nisl,
+        at vulputate massa ullamcorper eu. Morbi turpis felis, ullamcorper et quam ut, lobortis pulvinar turpis. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tortor metus, fermentum sed tellus vel, vulputate pharetra ante.
+        Aliquam eget justo sed velit sollicitudin consectetur quis a ipsum. In non faucibus nulla. 
+      </div>
+    </div>
   </section>
 
   <script src="./js/index.js" type="module"></script>
