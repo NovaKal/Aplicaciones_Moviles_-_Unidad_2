@@ -17,7 +17,7 @@
 
   <section id="login">
     <h1>Login</h1>
-    <section id="login">
+    <div id="login">
       <form id="login-form" onsubmit="event.preventDefault(); iniciarSesion();">
         <h1>Login de Usuario</h1>
         <label for="username-login">Nombre de usuario:</label>
@@ -62,19 +62,19 @@
     <h1>Home</h1>
       <div class="grid">
         <div class="half-row">
-          <button onclick="mostrarSeccion('login')" class="exit-button">Salir</button>
-          <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+          <button id="exitButton" onclick="mostrarSeccion('login')" class="exit-button">Salir</button>
+          <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
           <img src="./images/little-tree-5-sean-seal.jpg" alt="Tree">
         </div>
         <div class="row1">
           <img src="./images/clock.png" alt="Clock">
-          <button onclick="mostrarSeccion('semester')" class="option-button">Semester</button>
-          <button onclick="mostrarSeccion('course')" class="option-button">Course</button> 
+          <button id="semesterButton" onclick="mostrarSeccion('semester')" class="option-button">Semester</button>
+          <button id="courseButton" onclick="mostrarSeccion('course')" class="option-button">Course</button> 
         </div>
         <div class="row1">
-          <img src="./images/november-realistic-calendar-icon-3d-rendered-date-november-10-free-png.png" alt="Date">
-          <button onclick="mostrarSeccion('average_semester')" class="option-button">Average</button>
-          <button onclick="mostrarSeccion('calendar')" class="option-button">Calendar</button>
+          <img src="./images/calendar.png" alt="Date">
+          <button id="averageSemesterButton" onclick="mostrarSeccion('average_semester')" class="option-button">Average</button>
+          <button id="calendarButton" onclick="mostrarSeccion('calendar_month')" class="option-button">Calendar</button>
         </div>
       </div> 
   </section>
@@ -83,23 +83,36 @@
     <h1>Semester</h1>
     <div class="grid-container-modules">
       <div class="row1">
-        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
-        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
         <div class="image-title-container">
-          <img src="./images/clock.png" alt="icon">
+          <img src="./images/semester.png" alt="icon">
         </div>
+      </div>
+      <div>
+        <form id="formulario">
+          <label for="nuevo-elemento">Nuevo elemento:</label>
+          <input type="text" id="nuevo-elemento" name="nuevo-elemento" />
+          <button type="submit">Agregar elemento</button>
+        </form>
+        <ul id="lista">
+        </ul>
+        <button id="guardar-cambios">Guardar cambios</button>
       </div>
     </div>
   </section>
+
+  <div id="secciones">
+  </div>
 
   <section id="course">
     <h1>Course</h1>
     <div class="grid-container-modules">
       <div class="row1">
-        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
-        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
         <div class="image-title-container">
-          <img src="./" alt="icon">
+          <img src="./images/course.png" alt="icon">
         </div>
       </div>
     </div>
@@ -109,24 +122,108 @@
     <h1>Average Semester</h1>
     <div class="grid-container-modules">
       <div class="row1">
-        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
-        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
         <div class="image-title-container">
-          <img src="./" alt="icon">
+          <img src="./images/average.png" alt="icon">
+        </div>
+      </div>
+      <div>
+        <div class="barcontainer">
+          <div class="bar">
+            <button onclick="mostrarSeccion('course')" class="course-button">Curso 1</button>
+          </div>
+        </div>
+        <div class="barcontainer">
+          <div class="bar" style="height:30%">
+            <button onclick="mostrarSeccion('course')" class="course-button">Curso 2</button>
+          </div>
+        </div>
+        <div class="barcontainer">
+          <div class="bar" style="height:90%">
+            <button onclick="mostrarSeccion('course')" class="course-button">Curso 3</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="calendar">
-    <h1>Calendar</h1>
+  <section id="calendar_year">
+    <h1>Calendar Year</h1>
     <div class="grid-container-modules">
       <div class="row1">
-        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
-        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
         <div class="image-title-container">
-          <img src="./" alt="icon">
+          <img src="./images/calendar.png" alt="icon">
         </div>
+      </div>
+      <div class="row1">
+        <button onclick="mostrarSeccion('calendar_year')" class="calendar-button">Year</button>
+        <button onclick="mostrarSeccion('calendar_month')" class="calendar-button">Month</button>
+        <button onclick="mostrarSeccion('calendar_week')" class="calendar-button">Week</button>
+        <button onclick="mostrarSeccion('calendar_day')" class="calendar-button">Day</button>
+        <img src="./images/calendar_year-2023.png" alt="Calendar Year">
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar_month">
+    <h1>Calendar Month</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./images/calendar.png" alt="icon">
+        </div>
+      </div>
+      <div>
+        <button onclick="mostrarSeccion('calendar_year')" class="calendar-button">Year</button>
+        <button onclick="mostrarSeccion('calendar_month')" class="calendar-button">Month</button>
+        <button onclick="mostrarSeccion('calendar_week')" class="calendar-button">Week</button>
+        <button onclick="mostrarSeccion('calendar_day')" class="calendar-button">Day</button>
+        <img src="./images/calendar_month.png" alt="Calendar Month">
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar_week">
+    <h1>Calendar Week</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./images/calendar.png" alt="icon">
+        </div>
+      </div>
+      <div>
+        <button onclick="mostrarSeccion('calendar_year')" class="calendar-button">Year</button>
+        <button onclick="mostrarSeccion('calendar_month')" class="calendar-button">Month</button>
+        <button onclick="mostrarSeccion('calendar_week')" class="calendar-button">Week</button>
+        <button onclick="mostrarSeccion('calendar_day')" class="calendar-button">Day</button>
+        <img src="./images/calendar_week.jpg" alt="Calendar Week">
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar_day">
+    <h1>Calendar Day</h1>
+    <div class="grid-container-modules">
+      <div class="row1">
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <div class="image-title-container">
+          <img src="./images/calendar.png" alt="icon">
+        </div>
+      </div>
+      <div>
+        <button onclick="mostrarSeccion('calendar_year')" class="calendar-button">Year</button>
+        <button onclick="mostrarSeccion('calendar_month')" class="calendar-button">Month</button>
+        <button onclick="mostrarSeccion('calendar_week')" class="calendar-button">Week</button>
+        <button onclick="mostrarSeccion('calendar_day')" class="calendar-button">Day</button>
+        <img src="./images/calendar_day.png" alt="Calendar Day">
       </div>
     </div>
   </section>
@@ -135,13 +232,14 @@
     <h1>About</h1>
     <div class="grid-container-modules">
       <div class="row1">
-        <button onclick="mostrarSeccion('home')" class="exit-button">Home</button>
-        <button onclick="mostrarSeccion('settings')" class="settings-button">About</button>
+        <button id="exitButton" onclick="mostrarSeccion('home')" class="exit-button">Home</button>
+        <button id="settingsButton" onclick="mostrarSeccion('settings')" class="settings-button">About</button>
         <div class="image-title-container">
-          <img src="./images/png-clipart-computer-icons-scalable-graphics-font-conference-for-management-accounting-research-about-icon-text-computer-program-removebg-preview.png" alt="icon">
+          <img src="./images/information.png" alt="icon">
         </div>
       </div>
       <div>
+        <br>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis arcu eget velit suscipit, sit amet aliquet tellus feugiat.
         Etiam ut dictum ipsum, ut pulvinar mi. Ut posuere suscipit quam, ac accumsan magna dignissim dapibus. Maecenas suscipit risus sed magna blandit,
         ut aliquet libero luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut et quam ut erat vulputate facilisis nec non diam.
@@ -152,8 +250,6 @@
       </div>
     </div>
   </section>
-
-  <script src="./js/index.js" type="module"></script>
-  <script src="./js/registro.js"></script>
+  <script src="./js/indes.js"></script>
 </body>
 </html>
