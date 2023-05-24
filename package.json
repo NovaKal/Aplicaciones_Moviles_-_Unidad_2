@@ -11,7 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@capacitor/cli": "^5.0.4",
     "node-sass": "^8.0.0",
     "parcel-bundler": "^1.8.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.0.4",
+    "@capacitor/core": "^5.0.4"
   }
 }
